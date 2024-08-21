@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+int main(){
+    int row=0;
+    int col = 0;
+    printf("enter row value: ");
+    scanf("%d",&row);
+    printf("enter col value: ");
+    scanf("%d",&col);
+
+    int arr[row][col];
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+                printf("enter value for row %d col %d: ", i+1, j+1);
+                scanf("%d", &arr[i][j]);
+        }
+        
+    }
+printf("\n\n");
+
+int sum = 0;
+int prod = 1;
+
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+                printf("%d", arr[i][j]);
+                printf(" ");
+
+                sum+= arr[i][j];
+                prod *= arr[i][j];
+
+        }
+        printf("\n");        
+    }
+    
+    printf("product is: %d", prod);
+    printf("\n");
+    printf("sum is: %d", sum);
+
+}
